@@ -1,0 +1,29 @@
+//Deliverable1 - Reversing a Number
+
+import java.util.Scanner;
+
+public class DeliverableOne {
+    public static void main(String[] args) {
+        //Create Scanner object
+        Scanner scanner = new Scanner(System.in);
+
+        //Prompt the user input
+        System.out.print("Enter a number: ");
+        int userInput = scanner.nextInt();
+
+        //Creating variables
+        int reverse = 0;
+        //it helps to get reverse the number
+        int remainder;
+
+        //create While loop
+        while (userInput != 0) {
+            //calculating remainder & prompt the result of reverse
+            remainder = userInput % 10;
+            reverse = (reverse * 10) + remainder;
+            userInput = userInput / 10;
+            System.out.println("The result is: " + reverse);
+
+        }
+    }
+}
